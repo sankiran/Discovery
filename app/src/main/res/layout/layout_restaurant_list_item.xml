@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_medium">
+
+    <ImageView
+        android:id="@+id/restaurant_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        tools:src="@drawable/ic_launcher_background"/>
+
+    <LinearLayout
+        android:id="@+id/restaurant_name_cuisine_container"
+        android:layout_width="@dimen/discovery_list_restaurant_name_width"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/restaurant_image"
+        android:layout_toEndOf="@id/restaurant_image"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/restaurant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeaderText"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="Tsing Tao"/>
+
+        <TextView
+            android:id="@+id/restaurant_cuisine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SecondaryText"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAlignment="center"
+            tools:text="Chinese, Soup"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/restaurant_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SecondaryText"
+        android:layout_toRightOf="@id/restaurant_name_cuisine_container"
+        android:layout_toEndOf="@id/restaurant_name_cuisine_container"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        tools:text="Closed"/>
+</RelativeLayout>
